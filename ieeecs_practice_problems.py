@@ -5,17 +5,17 @@
 # Copyright © 2015 kirmani <sean@kirmani.io>
 #
 # Distributed under terms of the MIT license.
-"""TODO(kirmani): DO NOT SUBMIT without one-line documentation for test
+"""IEEE Computer Society: Python Workshop Practice Problems
 
-TODO(kirmani): DO NOT SUBMIT without a detailed description of test.
+These are some practice problems for the Python workshop hosting by the IEEE
+Computer Society at The University of Texas at Austin on November 30th, 2015.
+
+Try out these problems and try to solve them the Python-ic way!
 """
+
 import argparse
 import sys
 import time
-
-def main():
-    """TODO(kirmani): Do something more interesting here..."""
-    print 'Hello world!'
 
 def not_string(string):
     """Given a string, return a new string where "not" has been added to the
