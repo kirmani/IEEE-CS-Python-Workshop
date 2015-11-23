@@ -108,29 +108,3 @@ def centered_average(nums):
     centered_average([-10, -4, -2, -4, -2, 0]) --> -3
     """
     pass
-
-if __name__ == '__main__':
-    try:
-        START_TIME = time.time()
-        PARSER = argparse.ArgumentParser()
-        PARSER.add_argument('-v', '--verbose', action='store_true',
-                            default=False, help='verbose output')
-        PARSER.add_argument('-d', '--debug', action='store_true',
-                            default=False, help='debug output')
-        ARGS = PARSER.parse_args()
-        # if len(ARGS) < 1:
-        #   PARSER.error('missing argument')
-        if ARGS.verbose:
-            print time.asctime()
-        main()
-        if ARGS.verbose:
-            print time.asctime()
-        if ARGS.verbose:
-            print 'TOTAL TIME IN MINUTES:'
-        if ARGS.verbose:
-            print (time.time() - START_TIME) / 60.0
-        sys.exit(0)
-    except KeyboardInterrupt, error: # Ctrl-C
-        raise error
-    except SystemExit, error: # sys.exit()
-        raise error
