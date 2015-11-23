@@ -2,19 +2,19 @@
 # -*- coding: utf-8 -*-
 # vim:fenc=utf-8
 #
-# Copyright © 2015 sean <sean@wireless-10-146-149-144.public.utexas.edu>
+# Copyright © 2015 kirmani <sean@kirmani.io>
 #
 # Distributed under terms of the MIT license.
-"""TODO(sean): DO NOT SUBMIT without one-line documentation for test
+"""TODO(kirmani): DO NOT SUBMIT without one-line documentation for test
 
-TODO(sean): DO NOT SUBMIT without a detailed description of test.
+TODO(kirmani): DO NOT SUBMIT without a detailed description of test.
 """
 import argparse
 import sys
 import time
 
 def main():
-    """TODO(sean): Do something more interesting here..."""
+    """TODO(kirmani): Do something more interesting here..."""
     print 'Hello world!'
 
 def not_string(string):
