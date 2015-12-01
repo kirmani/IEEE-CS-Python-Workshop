@@ -13,6 +13,8 @@ Computer Society at The University of Texas at Austin on November 30th, 2015.
 Try out these problems and try to solve them the Python-ic way!
 """
 
+import re
+
 def not_string(string):
     """Given a string, return a new string where "not" has been added to the
     front. However, if the string already begins with "not", return the string
@@ -22,7 +24,7 @@ def not_string(string):
     not_string('x') --> 'not x'
     not_string('not bad') --> 'not bad'
     """
-    pass
+    return string if string.startswith('not') else 'not ' + string
 
 def array_count9(nums):
     """Given an array of ints, return the number of 9's in the array.
@@ -31,7 +33,7 @@ def array_count9(nums):
     array_count9([1, 9, 9]) --> 2
     array_count9([1, 9, 9, 3, 9]) --> 3
     """
-    pass
+    return len([x for x in nums if x == 9])
 
 def without_end(string):
     """Given a string, return a version without the first and last char, so
@@ -41,7 +43,7 @@ def without_end(string):
     without_end('java') --> 'av'
     without_end('coding') --> 'odin'
     """
-    pass
+    return string[1:-1]
 
 def common_end(list1, list2):
     """Given 2 arrays of ints, list1 and list2, return True if they have the
@@ -52,7 +54,7 @@ def common_end(list1, list2):
     common_end([1, 2, 3], [7, 3, 2]) --> False
     common_end([1, 2, 3], [1, 3]) --> True
     """
-    pass
+    return list1[0] == list2[0] or list1[-1] == list2[-1]
 
 def love6(num1, num2):
     """The number 6 is a truly great number. Given two int values, num1 and
@@ -63,7 +65,7 @@ def love6(num1, num2):
     love6(4, 5) --> False
     love6(1, 5) --> True
     """
-    pass
+    return num1 == 6 or num2 == 6 or abs(num1 + num2) == 6
 
 def round_sum(num1, num2, num3):
     """For this problem, we'll round an int value up to the next multiple of 10
@@ -78,7 +80,7 @@ def round_sum(num1, num2, num3):
     round_sum(12, 13, 14) --> 30
     round_sum(6, 4, 4) --> 10
     """
-    pass
+    return round(num1, -1) + round(num2, -1) + round(num3, -1)
 
 def count_code(string):
     """Return the number of times that the string "code" appears anywhere in the
@@ -89,7 +91,7 @@ def count_code(string):
     count_code('codexxcode') --> 2
     count_code('cozexxcope') --> 2
     """
-    pass
+    return len(re.findall('co[a-zA-Z]e', string))
 
 def centered_average(nums):
     """Return the "centered" average of an array of ints, which we'll say is the
@@ -103,4 +105,6 @@ def centered_average(nums):
     centered_average([1, 1, 5, 5, 10, 8, 7]) --> 5
     centered_average([-10, -4, -2, -4, -2, 0]) --> -3
     """
-    pass
+    nums.remove(max(nums))
+    nums.remove(min(nums))
+    return sum(nums) / len(nums)
