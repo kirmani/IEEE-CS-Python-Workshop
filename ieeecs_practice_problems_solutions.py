@@ -65,7 +65,8 @@ def love6(num1, num2):
     love6(4, 5) --> False
     love6(1, 5) --> True
     """
-    return num1 == 6 or num2 == 6 or abs(num1 + num2) == 6
+    return num1 == 6 or num2 == 6 \
+            or (num1 + num2 == 6) or abs(num1 - num2) == 6
 
 def round_sum(num1, num2, num3):
     """For this problem, we'll round an int value up to the next multiple of 10
