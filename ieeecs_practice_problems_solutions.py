@@ -7,7 +7,7 @@
 # Distributed under terms of the MIT license.
 """IEEE Computer Society: Python Workshop Practice Problems
 
-These are some practice problems for the Python workshop hosting by the IEEE
+These are some practice problems for the Python workshop hosted by the IEEE
 Computer Society at The University of Texas at Austin on November 30th, 2015.
 
 Try out these problems and try to solve them the Python-ic way!
@@ -106,6 +106,4 @@ def centered_average(nums):
     centered_average([1, 1, 5, 5, 10, 8, 7]) --> 5
     centered_average([-10, -4, -2, -4, -2, 0]) --> -3
     """
-    nums.remove(max(nums))
-    nums.remove(min(nums))
-    return sum(nums) / len(nums)
+    return (sum(nums) - max(nums) - min(nums)) / (len(nums) - 2)
